@@ -3,12 +3,12 @@
 #define INCLUDE_BST_H_
 
 template <typename T>
-class TIM {
+class BST {
  public:
-  TIM() {
+  BST() {
     root = nullptr;
   }
-  ~TIM() {}
+  ~BST() {}
   void add(T value) {
     root = addNode(root, value);
   }
@@ -33,7 +33,7 @@ class TIM {
 };
 
 template <typename T>
-typename TIM <T >::Node* BST <T >::addNode(Node* root, T val) {
+typename BST <T >::Node* BST <T >::addNode(Node* root, T val) {
   if (!root) {
     root = new Node;
     root -> value = val;
@@ -49,7 +49,7 @@ typename TIM <T >::Node* BST <T >::addNode(Node* root, T val) {
 }
 
 template <typename T>
-int TIM<T>::depthTree(Node* root) {
+int BST <T>::depthTree(Node* root) {
   if (!root) {
     return 0;
   } else {
@@ -64,7 +64,7 @@ int TIM<T>::depthTree(Node* root) {
 }
 
 template <typename T>
-int TIM<T>::searchNode(Node* root, T val) {
+int BST <T>::searchNode(Node* root, T val) {
   Node* t = root;
   if (!root) {
     return 0;
