@@ -6,5 +6,24 @@
 #include  "bst.h"
 
 BST<std::string> makeTree(const char* filename) {
-  // поместите сюда свой код
+  BST<std::string> newTree;
+  std::ifstream file(filename);
+  std::string word = "";
+  if (file.is_open()) {
+    while (!file.eof()) {
+      word = "";
+      while (true) {
+        char message = file.get();
+        if ((message >= 97 && message <= 122) || (message >= 65 && message <= 90)) {
+          word += tolower(message);
+        } else {
+          break;
+        }
+      }
+      newTree.add(word);
+    }
+    return newTree;
+  } else {
+    throw std::string("Did`t open!");
+  }
 }
