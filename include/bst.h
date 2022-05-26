@@ -49,7 +49,7 @@ typename BST <T >::Node* BST <T >::addNode(Node* root, T val) {
 }
 
 template <typename T>
-int BST <T>::depthTree(Node* root) {
+int BST<T>::depthTree(Node* root) {
   if (!root) {
     return 0;
   } else {
@@ -64,7 +64,7 @@ int BST <T>::depthTree(Node* root) {
 }
 
 template <typename T>
-int BST <T>::searchNode(Node* root, T val) {
+int BST<T>::searchNode(Node* root, T val) {
   Node* t = root;
   if (!root) {
     return 0;
