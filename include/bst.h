@@ -43,7 +43,7 @@ typename BST <T >::Node* BST <T >::addNode(Node* root, T val) {
   } else if (root->value < val) {
     root -> rightBr = addNode(root -> rightBr, val);
   } else {
-    (root -> amount)++;
+    (root -> sum)++;
   }
     return root;
 }
