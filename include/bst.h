@@ -18,7 +18,7 @@ class BST {
   int search(T value) {
     return (searchNode(root, value) + 1);
   }
- 
+
  private:
   struct Node {
     T value;
